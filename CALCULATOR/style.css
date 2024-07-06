@@ -1,0 +1,125 @@
+.body_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* 100% of viewport height */
+}
+
+.input {
+    font-size: 40px;
+    color: white;
+    border: 2px solid #8707ff;
+    border-radius: 10px;
+    padding: 10px ;
+    margin: 10px;
+    background: transparent;
+    width: 300px;
+    height: 60px;
+  }
+  
+  .input:active {
+    box-shadow: 2px 2px 15px #8707ff inset;
+  }
+  
+
+.button_group{
+    display: flex;
+    flex-direction: row;
+}
+.btn {
+    margin: 12px;
+    border: none;
+    width: 6em;
+    height: 6em;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    background: #1C1A1C;
+    cursor: pointer;
+    transition: all 450ms ease-in-out;
+
+    
+  }
+ 
+  .sparkle {
+    fill: #AAAAAA;
+    transition: all 800ms ease;
+  }
+  
+  .text {
+    font-weight: 600;
+    color: #AAAAAA;
+    font-size:40px;
+  }
+  
+  .btn:hover {
+    background: linear-gradient(0deg,#A47CF3,#683FEA);
+    box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4),
+    inset 0px -4px 0px 0px rgba(0, 0, 0, 0.2),
+    0px 0px 0px 4px rgba(255, 255, 255, 0.2),
+    0px 0px 180px 0px #9917FF;
+    transform: translateY(-2px);
+  }
+  
+  .btn:hover .text {
+    color: white;
+  }
+  
+  .btn:hover .sparkle {
+    fill: white;
+    transform: scale(1.2);
+  } 
+
+.card {
+    width: 350px;
+    height: 550px;
+    color: #67676b05;
+  
+    background: linear-gradient(-45deg, #111111 0%, #080808 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 25px;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0px 20px 40px 0px #020202d8,
+      0px 60px 80px 0px rgba(0, 0, 0, 0.678),
+      0px 20px 95px 0px rgba(13, 33, 94, 0);
+    border-top: 3px solid #a3a1a78f;
+    outline: 3px solid #27127436;
+  
+    transition: all 0.6s ease-out;
+  }
+  
+  .card:hover {
+    color: #928b8b;
+    background-color: 482fb8;
+    box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.945),
+      0px 10px 20px 0px rgba(29, 9, 143, 0.856), 0px 0px 180px 0px rgb(47, 4, 202);
+    outline: 3px solid #500bf0;
+    outline: 3px solid #5518e4;
+  
+    transform: scale(0.97);
+    transition: transform 0.4s, box-shadow 0.6s outline 0.8s ease-in;
+  }
+  
+  .logoUI {
+    filter: grayscale(60%);
+    margin-top: 20px;
+    width: 60%;
+    opacity: 10%;
+    transition: all 0.6s ease-in-out;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .card:hover .logoUI {
+    filter: contrast(180%);
+    backdrop-filter: grayscale(0%);
+  
+    opacity: 100%;
+    transition: all 1s ease-out;
+  }
+  

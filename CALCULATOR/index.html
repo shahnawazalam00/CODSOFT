@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet"  type="text/css" href="style.css">
+</head>
+<body>
+    <div class="body_container">
+    
+        <div class="card">
+        <div id="main">
+            <input class="input" name="text" type="text" id="maininput" />
+            <div class="button_group">
+                <button class="btn" style="background: linear-gradient(0deg,#A47CF3,#683FEA);">
+                <centre> <label class="text">AC</label></centre>
+                </button>
+                <button class="btn" style="background: linear-gradient(0deg,#A47CF3,#683FEA);">
+                    <centre> <label class="text">&#x232B</label></centre>
+                </button>
+                <button class="btn" style="background: linear-gradient(0deg,#A47CF3,#683FEA);">
+                    <centre> <label class="text">%</label></centre>
+                </button>
+                <button class="btn" style="background: linear-gradient(0deg,#A47CF3,#683FEA);">
+                    <centre> <label class="text">÷</label></centre>
+                </button>
+            </div>
+            <div class="button_group">
+                <button class="btn" onclick="setValue7()">
+                <centre> <label class="text" >7</label></centre>
+                </button>
+                <button class="btn" onclick="setValue8()">
+                    <centre> <label class="text">8</label></centre>
+                </button>
+                <button class="btn" onclick="setValue9()">
+                    <centre> <label class="text">9</label></centre>
+                </button>
+                <button class="btn" style="background: linear-gradient(0deg,#A47CF3,#683FEA);" onclick="setValue7()">
+                    <centre> <label class="text">x</label></centre>
+                </button>
+            </div>
+            <div class="button_group">
+                <button class="btn" onclick="setValue4()">
+                <centre> <label class="text">4</label></centre>
+                </button>
+                <button class="btn" onclick="setValue5()">
+                    <centre> <label class="text">5</label></centre>
+                </button>
+                <button class="btn" onclick="setValue6()">
+                    <centre> <label class="text">6</label></centre>
+                </button>
+                <button class="btn" style="background: linear-gradient(0deg,#A47CF3,#683FEA);" onclick="setValue7()">
+                    <centre> <label class="text">-</label></centre>
+                </button>
+            </div>
+            <div class="button_group">
+                <button class="btn" onclick="setValue1()">
+                <centre> <label class="text">1</label></centre>
+                </button>
+                <button class="btn" onclick="setValue2()">
+                    <centre> <label class="text">2</label></centre>
+                </button>
+                <button class="btn" onclick="setValue3()">
+                    <centre> <label class="text">3</label></centre>
+                </button>
+                <button class="btn" style="background: linear-gradient(0deg,#A47CF3,#683FEA);" onclick="setValuep()">
+                    <centre> <label class="text">+</label></centre>
+                </button>
+            </div>
+            <div class="button_group">
+                <button class="btn">
+                <centre> <label class="text" onclick="setValue7()">.</label></centre>
+                </button>
+                <button class="btn" onclick="setValue0()">
+                    <centre> <label class="text">0</label></centre>
+                </button>
+                <button class="btn" style="width: 150px; background: linear-gradient(0deg,#A47CF3,#683FEA);" onclick="evaluateExpression()">
+                    <centre> <label class="text">=</label></centre>
+                </button>
+                
+            </div>
+                
+                
+
+        </div>
+
+        </div>
+    </div>
+
+
+    <script>
+        function setValuep() {
+            var inputField = document.getElementById('maininput');
+            inputField.value = inputField.value+"+";
+        }
+        function setValue0() {
+            var inputField = document.getElementById('maininput');
+            inputField.value = inputField.value+"0";
+        }
+        function setValue1() {
+            var inputField = document.getElementById('maininput');
+            inputField.value = inputField.value+"1";
+        }
+        function setValue2() {
+            var inputField = document.getElementById('maininput');
+            inputField.value = inputField.value+"2";
+        }
+        function setValue3() {
+            var inputField = document.getElementById('maininput');
+            inputField.value = inputField.value+"3";
+        }
+        function setValue4() {
+            var inputField = document.getElementById('maininput');
+            inputField.value = inputField.value+"4";
+        }
+        function setValue5() {
+            var inputField = document.getElementById('maininput');
+            inputField.value = inputField.value+"5";
+        }
+        function setValue6() {
+            var inputField = document.getElementById('maininput');
+            inputField.value = inputField.value+"6";
+        }
+        function setValue7() {
+            var inputField = document.getElementById('maininput');
+            inputField.value = inputField.value+"7";
+        }
+        function setValue8() {
+            var inputField = document.getElementById('maininput');
+            inputField.value = inputField.value+"8";
+        }
+        function setValue9() {
+            var inputField = document.getElementById('maininput');
+            inputField.value = inputField.value+"9";
+        }
+        function evaluateExpression() {
+            
+            var inputField = document.getElementById('maininput');
+            
+            var inputValue = inputField.value;
+
+            try {
+               
+                var result = eval(inputValue);
+               
+                inputField.value = result;
+            } catch (e) {
+              
+                inputField.value = "Error";
+            }
+        }
+    </script>
+
+      
+</body>
+</html>
